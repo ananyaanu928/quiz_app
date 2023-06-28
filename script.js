@@ -8,7 +8,7 @@ let question = [
   {
     num: 2,
     title: "Why were cookies designed ?",
-    option: ["server-side programming", "serverclient-side programming", "both a & b", "none"],
+    option: ["server-side programming", "client-side programming", "both a & b", "none"],
     ans: "a"
   },
   {
