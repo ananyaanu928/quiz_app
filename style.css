@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+.begin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 470px;
+  height: 250px;
+  background-color: #E5D1FA;
+  border-radius: 10px;
+  padding: 0 12px;
+}
+.begin button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background-color: #9336B4;
+  box-shadow: 0 0 8px 4px #C4B0FF;
+}
+.mainBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+.mainBox header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 61px;
+  padding: 0 8px;
+  box-shadow: 0 0 10px 2px  #00000020;
+}
+.mainBox header p {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-left: 10px;
+}
+.mainBox header .timer {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  margin-right: 9px;
+  color: #000;
+  border-radius: 5px;
+  background: #FF6666;
+}
+.mainBox .questions {
+  display: flex;
+  align-self: flex-start;
+  padding: 20px 0;
+  padding-bottom: 0;
+}
+.questions .section {
+  width: 453px;
+  padding: 0 1.2rem;
+}
+.questions .section .title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.questions .section div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #E3DFFD;
+  border: 2px solid #E5D1FA;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.questions .section div span {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+.questions .section div i {
+  position: absolute;
+  right: 15px;
+  height: 26px;
+  width: 26px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  pointer-events: none;
+}
+.questions .section div i.fa-check {
+  color: #23903c;
+  border-color: #23903c;
+  background: #d4edda;
+}
+.questions .section div i.fa-times {
+  color: #a42834;
+  background: #f8d7da;
+  border-color: #a42834;
+}
+.questions .section div:hover {
+  background: #cce5ff;
+  color: #004085;
+  border: 2px solid #b8daff;
+}
+.questions .section div.selected {
+  background: #E5D1FA;
+  border: 2px solid #E5D1FA;
+}
+.questions .section div.correct {
+  background: #00ff0050;
+  border: 2px solid #00ff0050;
+}
+.questions .section div.wrong {
+  background-color: #ff000030;
+  border: 2px solid #ff000030;
+}
+.mainBox footer {
+  margin: 5px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+.mainBox footer button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 11px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 3px;
+  background-color: #865DFF;
+  color: #000;
+  cursor: pointer;
+}
+.result {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 200px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 0;
+}
+.result .resultInNum {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem;
+}
+.resultInNum p {
+  color:  blueviolet;
+  margin: 0 10px;
+  font-weight: 1000;
+}
+
+.result button {
+  font-size: 1.4rem;
+  font-weight: 950;
+  margin: 1rem 0.3rem;
+  padding: 8px;
+  border: none;
+  border-radius: 7px;
+  background-color: blueviolet;
+  color: #222;
+  cursor: pointer;
+}
+button {
+  transition: 0.3s ease-out;
+  letter-spacing: 1.2px;
+}
+button:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+}
+.hiddenPart {
+  position: absolute;
+  pointer-events: none;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: 0s;
+  z-index: -999;
+}
